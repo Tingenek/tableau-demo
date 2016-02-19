@@ -1,0 +1,8 @@
+<prescription xmlns="http://nhs.prescriptions.com">
+  <id>11220</id>
+  <chapter_name>Dressings</chapter_name>
+  <section>7</section>
+  <section_name>Lints</section_name>
+  <items>1</items>
+  <actual_cost>11</actual_cost>
+</prescription>

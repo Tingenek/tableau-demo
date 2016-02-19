@@ -1,0 +1,8 @@
+<prescription xmlns="http://nhs.prescriptions.com">
+  <id>9915</id>
+  <chapter_name>Anaesthesia</chapter_name>
+  <section>2</section>
+  <section_name>Local Anaesthesia</section_name>
+  <items>4510</items>
+  <actual_cost>39903</actual_cost>
+</prescription>

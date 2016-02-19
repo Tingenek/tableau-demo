@@ -1,0 +1,8 @@
+<prescription xmlns="http://nhs.prescriptions.com">
+  <id>12421</id>
+  <chapter_name>Appliances</chapter_name>
+  <section>6</section>
+  <section_name>Trusses</section_name>
+  <items>11</items>
+  <actual_cost>266</actual_cost>
+</prescription>

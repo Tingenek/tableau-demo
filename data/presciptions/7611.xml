@@ -1,0 +1,8 @@
+<prescription xmlns="http://nhs.prescriptions.com">
+  <id>7611</id>
+  <chapter_name>Eye</chapter_name>
+  <section>7</section>
+  <section_name>Local Anaesthetics</section_name>
+  <items>1</items>
+  <actual_cost>5</actual_cost>
+</prescription>

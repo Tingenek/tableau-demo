@@ -1,0 +1,8 @@
+<prescription xmlns="http://nhs.prescriptions.com">
+  <id>273</id>
+  <chapter_name>Respiratory System</chapter_name>
+  <section>8</section>
+  <section_name>Aromatic Inhalations</section_name>
+  <items>10</items>
+  <actual_cost>11</actual_cost>
+</prescription>

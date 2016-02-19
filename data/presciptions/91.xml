@@ -1,0 +1,8 @@
+<prescription xmlns="http://nhs.prescriptions.com">
+  <id>91</id>
+  <chapter_name>Gastro-Intestinal System</chapter_name>
+  <section>8</section>
+  <section_name>Stoma Care</section_name>
+  <items>6</items>
+  <actual_cost>25</actual_cost>
+</prescription>

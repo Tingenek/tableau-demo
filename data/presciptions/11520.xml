@@ -1,0 +1,8 @@
+<prescription xmlns="http://nhs.prescriptions.com">
+  <id>11520</id>
+  <chapter_name>Dressings</chapter_name>
+  <section>11</section>
+  <section_name>Surgical Sutures</section_name>
+  <items>490</items>
+  <actual_cost>799</actual_cost>
+</prescription>

@@ -1,0 +1,8 @@
+<prescription xmlns="http://nhs.prescriptions.com">
+  <id>455</id>
+  <chapter_name>Infections</chapter_name>
+  <section>5</section>
+  <section_name>Anthelmintics</section_name>
+  <items>470</items>
+  <actual_cost>898</actual_cost>
+</prescription>

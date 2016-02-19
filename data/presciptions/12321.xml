@@ -1,0 +1,8 @@
+<prescription xmlns="http://nhs.prescriptions.com">
+  <id>12321</id>
+  <chapter_name>Appliances</chapter_name>
+  <section>4</section>
+  <section_name>Contraceptive Devices</section_name>
+  <items>138</items>
+  <actual_cost>1462</actual_cost>
+</prescription>

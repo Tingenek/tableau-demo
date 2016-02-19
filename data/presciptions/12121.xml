@@ -1,0 +1,8 @@
+<prescription xmlns="http://nhs.prescriptions.com">
+  <id>12121</id>
+  <chapter_name>Appliances</chapter_name>
+  <section>2</section>
+  <section_name>Catheters</section_name>
+  <items>3444</items>
+  <actual_cost>356562</actual_cost>
+</prescription>

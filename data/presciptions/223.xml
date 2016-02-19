@@ -1,0 +1,8 @@
+<prescription xmlns="http://nhs.prescriptions.com">
+  <id>223</id>
+  <chapter_name>Respiratory System</chapter_name>
+  <section>1</section>
+  <section_name>Bronchodilators</section_name>
+  <items>74839</items>
+  <actual_cost>754701</actual_cost>
+</prescription>
