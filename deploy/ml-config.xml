@@ -187,6 +187,27 @@
         </fragment-parent>
       </fragment-parents>
 -->
+
+<fields>
+<field>
+  <field-name>position</field-name>
+  <include-root>false</include-root>
+  <word-lexicons/>
+  <included-elements>
+    <included-element>
+      <namespace-uri/>
+      <localname>Position</localname>
+      <weight>1.0</weight>
+      <attribute-namespace-uri/>
+      <attribute-localname/>
+      <attribute-value/>
+    </included-element>
+  </included-elements>
+  <excluded-elements/>
+  <tokenizer-overrides/>
+</field>
+</fields>
+
 <!--
       <fields>
         <field>
@@ -236,6 +257,41 @@
       </fields>
 -->
       <range-element-indexes>
+        <range-element-index>
+            <scalar-type>decimal</scalar-type>
+            <namespace-uri></namespace-uri>
+            <localname>Amount</localname>
+            <collation></collation>
+            <range-value-positions>false</range-value-positions>
+          </range-element-index>
+        <range-element-index>
+            <scalar-type>date</scalar-type>
+            <namespace-uri></namespace-uri>
+            <localname>Date</localname>
+            <collation></collation>
+            <range-value-positions>false</range-value-positions>
+          </range-element-index>
+        <range-element-index>
+            <scalar-type>string</scalar-type>
+            <namespace-uri></namespace-uri>
+            <localname>LastName</localname>
+            <collation>http://marklogic.com/collation/</collation>
+            <range-value-positions>false</range-value-positions>
+          </range-element-index>
+        <range-element-index>
+            <scalar-type>string</scalar-type>
+            <namespace-uri></namespace-uri>
+            <localname>FirstName</localname>
+            <collation>http://marklogic.com/collation/</collation>
+            <range-value-positions>false</range-value-positions>
+          </range-element-index>
+        <range-element-index>
+            <scalar-type>int</scalar-type>
+            <namespace-uri></namespace-uri>
+            <localname>EmployeeID</localname>
+            <collation></collation>
+            <range-value-positions>false</range-value-positions>
+          </range-element-index>
         <range-element-index>
             <scalar-type>long</scalar-type>
             <namespace-uri>http://nhs.prescriptions.com</namespace-uri>

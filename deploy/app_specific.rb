@@ -14,38 +14,27 @@ class ServerConfig
      @logger.info(@properties["ml.content-db"])
    end
 
-  def delete_view()
-    r = execute_query %Q{
+  def make_views()
+  r = execute_query %Q{
       xquery version "1.0-ml"; 
+      
+      import module namespace view = "http://marklogic.com/xdmp/view" at "/MarkLogic/views.xqy";
 
-      import module namespace view = "http://marklogic.com/xdmp/view" 
-        at "/MarkLogic/views.xqy";
+  
+  	xdmp:log("Creating views.."),
 
-      try {
-        view:remove(
-          "main",
-          "prescriptions"
-        )
-      } catch ($e) { () }
-      (: Deletes a view, of the 'main' schema that contains columns, with a scope on the element, 'html'. :)
-    },
-    { :db_name => @properties["ml.content-db"] }
-  end
+        try {
+           view:remove("main","prescriptions"),
+           view:remove("main","employees"),
+           view:remove("main","expenses")
+        } catch ($ignore) {
+        };
 
-  def create_view()
-    r = execute_query %Q{
-      xquery version "1.0-ml"; 
+	xquery version "1.0-ml"; 
+ 
+    import module namespace view = "http://marklogic.com/xdmp/view" at "/MarkLogic/views.xqy";
 
-      import module namespace view = "http://marklogic.com/xdmp/view" 
-        at "/MarkLogic/views.xqy";
-
-      try {
-        view:schema-create(
-          "main",
-          ()
-        )
-      } catch ($e) {()},
-  	  view:create(
+	  view:create(
       "main",
       "prescriptions",
        view:element-view-scope(fn:QName("http://nhs.prescriptions.com","prescription")),
@@ -57,14 +46,37 @@ class ServerConfig
             view:column("id", cts:element-reference(fn:QName("http://nhs.prescriptions.com", "id")))
       )     
       ,
+      () ),
+         
+      view:create(
+      "main",
+      "employees",
+       view:element-view-scope(fn:QName("","Employee")),
+      ( view:column("uri", cts:uri-reference()), 
+            view:column("employeeid", cts:element-reference(fn:QName("","EmployeeID"))),
+            view:column("firstname", cts:element-reference(fn:QName("","FirstName"))),
+            view:column("lastname", cts:element-reference(fn:QName("","LastName")))
+      )     
+      ,
+      () ),
+      
+      view:create(
+      "main",
+      "expenses",
+       view:element-view-scope(fn:QName("","Employee")),
+      ( view:column("uri", cts:uri-reference()), 
+            view:column("employeeid", cts:element-reference(fn:QName("","EmployeeID"))),
+            view:column("data", cts:element-reference(fn:QName("","Date"))),
+            view:column("amount", cts:element-reference(fn:QName("","Amount")))
+      )     
+      ,
       () )
-
-      (: Creates a prescriptions view, of the 'main' schema . :)
+      
     },
     { :db_name => @properties["ml.content-db"] }
-    logger.info "created prescriptions view"
-  end
-
+    logger.info "created prescriptions, expenses and employee views"
+  end 
+      
 end
   
 #
